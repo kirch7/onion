@@ -1,3 +1,19 @@
 body {
     background:lightgreen;
 }
+
+a:link {
+    color: darkgreen;
+}
+
+a:visited {
+    color: darkgreen;
+}
+
+a:hover {
+    color: black;
+}
+
+a:active {
+    color: purple;
+}

@@ -1,0 +1,23 @@
+sudo: false
+
+os:
+  - linux
+  - osx
+
+language: rust
+rust: nightly
+env: TARGET=wasm32-unknown-unknown
+
+cache:
+  cargo
+
+rust:
+  - stable
+
+script:
+  - cargo build --verbose --all
+  - cargo test --verbose --all
+
+notifications:
+  email: cassiokirch@gmail.com
+on_success: always

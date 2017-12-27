@@ -10,10 +10,12 @@ rust: nightly
 cache: cargo
 
 script:
+#  - git clone git@github.com:alexcrichton/wasm-gc.git
+#  - cd wasm-gc/ && cargo +nightly build --release && cd -
   - rustup toolchain install nightly
   - rustup target install wasm32-unknown-unknown
-  - cargo +nightly build --verbose --all --target wasm32-unknown-unknown
-  - cargo +nightly test --verbose --all --target wasm32-unknown-unknown
+  - cargo +nightly build --verbose --all --release --target wasm32-unknown-unknown
+#  - wasm-gc/target/release/wasm-gc target/wasm32-unknown-unknown/release/onion.wasm onion.wasm
 
 notifications:
   email: cassiokirch@gmail.com

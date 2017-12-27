@@ -1,0 +1,9 @@
+[package]
+name = "onion"
+version = "0.1.0"
+
+[lib]
+name = "onion"
+crate-type = ["cdylib"]
+
+[dependencies]

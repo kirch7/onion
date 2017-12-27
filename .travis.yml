@@ -8,11 +8,7 @@ language: rust
 rust: nightly
 env: TARGET=wasm32-unknown-unknown
 
-cache:
-  cargo
-
-rust:
-  - stable
+cache: cargo
 
 script:
   - cargo build --verbose --all
@@ -20,4 +16,4 @@ script:
 
 notifications:
   email: cassiokirch@gmail.com
-on_success: always
+  on_success: always

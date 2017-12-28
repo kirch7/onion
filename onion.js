@@ -23,7 +23,7 @@ input_div.innerHTML += '<button onclick="run()">Run</button>';
 
 
 function run() {
-    loadWebAssembly('./onion.wasm').then(instance => {
+    loadWebAssembly('../onion.wasm').then(instance => {
 	const { onion } = instance.exports;
 	const layers = document.getElementById("layers").value;
 	const beg = performance.now();
